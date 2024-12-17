@@ -45,5 +45,6 @@ Este projeto está sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para m
 Se precisar de ajuda ou tiver dúvidas, entre em contato comigo:
 
 - E-mail: licaslifas@gmail.com
-- GitHub: [https://github.com/seunome](https://github.com/lycas-gluiz)
-- LinkedIn: [https://www.linkedin.com/in/seunome](https://www.linkedin.com/in/lucasgonzagaluiz)
+- GitHub: [https://github.com/lycas-gluiz](https://github.com/lycas-gluiz)
+- LinkedIn: [https://www.linkedin.com/in/lucasgonzagaluiz](https://www.linkedin.com/in/lucasgonzagaluiz)
+- Portfolio Web: [https://lycas-gluiz.github.io/portifolio/](https://lycas-gluiz.github.io/portifolio/)
