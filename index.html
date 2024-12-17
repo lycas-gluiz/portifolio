@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Seu Nome">
-    <title>Portfólio</title>
+    <title>Portfólio de Projetos</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -44,44 +44,25 @@
             color: #ff6347;
         }
 
-        .section {
-            padding: 50px 20px;
-            text-align: center;
+        .projects-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
         }
 
-        .section h2 {
-            font-size: 2em;
+        .project {
+            background-color: white;
+            width: 30%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
-        }
-
-        .about-me, .projects, .contact {
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             transition: transform 0.3s ease;
         }
 
-        .about-me:hover, .projects:hover, .contact:hover {
+        .project:hover {
             transform: translateY(-10px);
-        }
-
-        .about-me img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .project {
-            display: inline-block;
-            width: 30%;
-            margin: 10px;
-            box-sizing: border-box;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .project img {
@@ -91,6 +72,24 @@
 
         .project h3 {
             margin-top: 15px;
+            color: #333;
+        }
+
+        .project p {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 15px;
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -127,49 +126,41 @@
 <body>
 
     <header>
-        <h1>Meu Portfólio</h1>
-        <p>Desenvolvedor | Designer | Criativo</p>
+        <h1>Meu Portfólio de Projetos</h1>
+        <p>Confira alguns dos meus projetos desenvolvidos</p>
     </header>
 
     <nav>
-        <a href="#about">Sobre Mim</a>
-        <a href="#projects">Projetos</a>
-        <a href="#contact">Contato</a>
+        <a href="#project1">Projeto 1</a>
+        <a href="#project2">Projeto 2</a>
+        <a href="#project3">Projeto 3</a>
     </nav>
 
-    <section id="about" class="section about-me"> 
-        <h2>Sobre Mim</h2>
-        <img src="images.jpeg" alt="Minha Foto">
-        <p>Olá! Sou um desenvolvedor apaixonado por criar experiências digitais únicas. Com experiência em várias tecnologias, adoro resolver problemas e criar soluções inovadoras.</p>
-    </section>
-
-    <section id="projects" class="section projects">
-        <h2>Meus Projetos</h2>
-        <div class="project">
-            <a href="teste.html" target="_self" style="text-decoration: none; color: inherit;">
-                <img src="https://via.placeholder.com/300" alt="Projeto 1">
-                <h3>Projeto 1</h3>
-                <p>Descrição breve do projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </a>
+    <div class="projects-container">
+        <!-- Projeto 1 -->
+        <div class="project" id="project1">
+            <img src="https://via.placeholder.com/400x250" alt="Projeto 1">
+            <h3>Projeto 1</h3>
+            <p>Descrição breve do projeto 1. Pode incluir tecnologias usadas e o propósito do projeto.</p>
+            <a href="https://linkdoproj1.com" target="_blank">Ver Projeto</a>
         </div>
-        
-        <div class="project">
-            <img src="https://via.placeholder.com/300" alt="Projeto 2">
+
+        <!-- Projeto 2 -->
+        <div class="project" id="project2">
+            <img src="https://via.placeholder.com/400x250" alt="Projeto 2">
             <h3>Projeto 2</h3>
-            <p>Descrição breve do projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Descrição breve do projeto 2. Descreva o que foi feito e os resultados obtidos.</p>
+            <a href="https://linkdoproj2.com" target="_blank">Ver Projeto</a>
         </div>
-        <div class="project">
-            <img src="https://via.placeholder.com/300" alt="Projeto 3">
-            <h3>Projeto 3</h3>
-            <p>Descrição breve do projeto. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </section>
 
-    <section id="contact" class="section contact">
-        <h2>Contato</h2>
-        <p>Gostou do meu trabalho? Vamos conversar! Você pode me encontrar nas redes sociais abaixo ou me enviar um email diretamente.</p>
-        <a href="mailto:seunome@dominio.com">Enviar Email</a>
-    </section>
+        <!-- Projeto 3 -->
+        <div class="project" id="project3">
+            <img src="https://via.placeholder.com/400x250" alt="Projeto 3">
+            <h3>Projeto 3</h3>
+            <p>Descrição breve do projeto 3. Fale um pouco sobre a ideia por trás do projeto e seu impacto.</p>
+            <a href="https://linkdoproj3.com" target="_blank">Ver Projeto</a>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 Meu Portfólio - <a href="https://github.com/seunome">GitHub</a> | <a href="https://www.linkedin.com/in/seunome">LinkedIn</a></p>
