@@ -44,6 +44,39 @@
             color: #ff6347;
         }
 
+        /* Seção Sobre Mim */
+        .about-me {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .about-me:hover {
+            transform: translateY(-10px);
+        }
+
+        .about-me img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .about-me h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .about-me p {
+            color: #666;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Seção de Projetos */
         .projects-container {
             display: flex;
             justify-content: space-around;
@@ -113,11 +146,19 @@
             .project {
                 width: 45%;
             }
+
+            .about-me img {
+                max-width: 120px;
+            }
         }
 
         @media (max-width: 480px) {
             .project {
                 width: 100%;
+            }
+
+            .about-me img {
+                max-width: 100px;
             }
         }
 
@@ -127,14 +168,22 @@
 
     <header>
         <h1>Meu Portfólio de Projetos</h1>
-        <p>Confira alguns dos meus projetos desenvolvidos</p>
+        <p>Confira alguns dos meus projetos desenvolvidos e saiba mais sobre mim!</p>
     </header>
 
     <nav>
+        <a href="#about-me">Sobre Mim</a>
         <a href="#project1">Projeto 1</a>
         <a href="#project2">Projeto 2</a>
         <a href="#project3">Projeto 3</a>
     </nav>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about-me" class="about-me">
+        <img src="images.jpeg" alt="Minha Foto">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou um desenvolvedor web apaixonado por tecnologia e design. Tenho experiência em várias tecnologias como HTML, CSS, JavaScript e frameworks modernos. Gosto de criar experiências digitais incríveis, focando sempre na qualidade e usabilidade dos projetos. Estou sempre buscando aprender mais e me aprimorar para oferecer soluções criativas e eficientes.</p>
+    </section>
 
     <div class="projects-container">
         <!-- Projeto 1 -->
