@@ -3,217 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Seu Nome">
-    <title>Portfólio de Projetos</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#ffffff"> <!-- Cor de fundo da aba do navegador -->
+    <title>Lucas Gonzaga Luiz - Desenvolvedor Web</title> <!-- Cor do título da página -->
+    <!-- Link para o Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Favicon (ícone da aba do navegador) -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
-        nav {
-            background-color: #444;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        nav a:hover {
-            color: #ff6347;
-        }
-
-        /* Seção Sobre Mim */
-        .about-me {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 30px;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .about-me:hover {
-            transform: translateY(-10px);
-        }
-
-        .about-me img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-        }
-
-        .about-me h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .about-me p {
-            color: #666;
-            font-size: 1.1em;
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #2c2c2c; /* Cinza escuro para fundo */
+            color: #f5f5f5; /* Texto em cinza claro */
             line-height: 1.6;
         }
 
-        /* Seção de Projetos */
-        .projects-container {
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Paleta de cores */
+        :root {
+            --purple: #6a1b9a; /* Roxo vibrante */
+            --purple-dark: #4e148c; /* Roxo mais escuro */
+            --gray-light: #d3d3d3; /* Cinza claro */
+            --gray-dark: #2c2c2c; /* Cinza bem escuro */
+            --white: #fff;
+        }
+
+        header {
             display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 0;
+            background-color: var(--purple-dark); /* Roxo mais escuro */
+            color: var(--white);
+            border-bottom: 6px solid var(--purple); /* Roxo vibrante para a borda */
         }
 
-        .project {
-            background-color: white;
-            width: 30%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
+        header .profile img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--white);
         }
 
-        .project:hover {
-            transform: translateY(-10px);
+        header .info {
+            flex: 1;
+            padding-left: 20px;
         }
 
-        .project img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .project h3 {
-            margin-top: 15px;
-            color: #333;
-        }
-
-        .project p {
-            color: #666;
-            margin-top: 10px;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 15px;
-            color: #ff6347;
-            text-decoration: none;
+        header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
             font-weight: 600;
         }
 
-        .project a:hover {
-            text-decoration: underline;
+        header h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #ffffff; /* Cor branca para o texto */
+        }
+
+        header p {
+            font-size: 1.1rem;
+            margin: 5px 0;
+        }
+
+        header a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        header a:hover {
+            color: var(--purple); /* Roxo vibrante para hover */
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: var(--purple); /* Roxo vibrante para os títulos */
+            font-weight: 600;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--gray-light); /* Cinza claro para o texto */
+        }
+
+        .projeto {
+            background-color: var(--gray-dark); /* Cinza escuro para o fundo dos projetos */
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .projeto:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .projeto img {
+            width: 100%;
+            height: auto;
+            max-width: 553px;
+            max-height: 563px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .projeto img:hover {
+            transform: scale(1.08);
+        }
+
+        /* Estilo para o botão */
+        .btn-projeto {
+            display: inline-block;
+            background-color: var(--purple); /* Cor de fundo roxa */
+            color: var(--white);
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border-radius: 30px; /* Bordas arredondadas */
+            text-decoration: none; /* Remove o sublinhado */
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            margin-top: 20px;
+        }
+
+        .btn-projeto:hover {
+            background-color: var(--purple-dark); /* Cor mais escura ao passar o mouse */
+            transform: translateY(-5px); /* Efeito de "levitação" */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+        }
+
+        /* Adicional para foco */
+        .btn-projeto:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px var(--purple); /* Adiciona um foco roxo */
         }
 
         footer {
-            background-color: #333;
-            color: white;
+            background-color: var(--purple-dark); /* Roxo mais escuro */
+            color: var(--white);
             text-align: center;
-            padding: 20px;
+            padding: 35px 0;
+            margin-top: 60px;
         }
 
-        footer a {
-            color: #ff6347;
-            text-decoration: none;
+        footer p {
+            font-size: 1.1rem;
+            font-weight: 300;
         }
 
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsividade */
         @media (max-width: 768px) {
-            .project {
-                width: 45%;
+            header {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .about-me img {
-                max-width: 120px;
+            header .info {
+                padding-left: 0;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .projeto {
+                padding: 20px;
+            }
+
+            .projeto img {
+                max-width: 100%;
+                height: auto;
             }
         }
-
-        @media (max-width: 480px) {
-            .project {
-                width: 100%;
-            }
-
-            .about-me img {
-                max-width: 100px;
-            }
-        }
-
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Meu Portfólio de Projetos</h1>
-        <p>Confira alguns dos meus projetos desenvolvidos e saiba mais sobre mim!</p>
+        <div class="container">
+            <div class="profile">
+              <img src="images/images.jpg" alt="Foto de Perfil">
+            </div>
+            <div class="info">
+                <h1>Lucas Gonzaga Luiz</h1>
+                <h2>Desenvolvedor Web | Programador | Entusiasta de Tecnologia</h2>
+                <p><strong>E-mail:</strong> licaslifas@gmail.com</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/lycas-gluiz" target="_blank">github.com/lycas-gluiz</a></p>
+                <p><strong>Telefone:</strong> (14) 99162-0767</p>
+            </div>
+        </div>
     </header>
-
-    <nav>
-        <a href="#about-me">Sobre Mim</a>
-        <a href="#project1">Projeto 1</a>
-        <a href="#project2">Projeto 2</a>
-        <a href="#project3">Projeto 3</a>
-    </nav>
-
-    <!-- Seção Sobre Mim -->
-    <section id="about-me" class="about-me">
-        <img src="images.jpeg" alt="Minha Foto">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Sou um desenvolvedor web apaixonado por tecnologia e design. Tenho experiência em várias tecnologias como HTML, CSS, JavaScript e frameworks modernos. Gosto de criar experiências digitais incríveis, focando sempre na qualidade e usabilidade dos projetos. Estou sempre buscando aprender mais e me aprimorar para oferecer soluções criativas e eficientes.</p>
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <p>Desenvolvedor Web iniciante com 1 ano e 3 meses de experiência em Python, JavaScript, HTML, CSS e Java. Tenho um forte desejo de aprender continuamente, aprimorar minhas habilidades e enfrentar novos desafios. Focado em desenvolvimento web, sempre busco incorporar novas tecnologias e boas práticas no meu trabalho.</p>
+        </div>
     </section>
-
-    <div class="projects-container">
-        <!-- Projeto 1 -->
-        <div class="project" id="project1">
-            <img src="https://via.placeholder.com/400x250" alt="Projeto 1">
-            <h3>Projeto 1</h3>
-            <p>Descrição breve do projeto 1. Pode incluir tecnologias usadas e o propósito do projeto.</p>
-            <a href="https://linkdoproj1.com" target="_blank">Ver Projeto</a>
+    <section id="habilidades">
+        <div class="container">
+            <h2>Habilidades e Competências</h2>
+            <ul>
+                <li><strong>Linguagens de Programação:</strong> Python, JavaScript, HTML, CSS, Java</li>
+                <li><strong>Pacote Office:</strong> Conhecimento básico</li>
+                <li><strong>Hardware de Máquinas:</strong> Conhecimento avançado</li>
+                <li><strong>Sistemas Operacionais:</strong> Conhecimento intermediário</li>
+                <li><strong>Outras habilidades:</strong> Aprendizado rápido, Resiliência, Boas práticas de programação</li>
+            </ul>
         </div>
-
-        <!-- Projeto 2 -->
-        <div class="project" id="project2">
-            <img src="https://via.placeholder.com/400x250" alt="Projeto 2">
-            <h3>Projeto 2</h3>
-            <p>Descrição breve do projeto 2. Descreva o que foi feito e os resultados obtidos.</p>
-            <a href="https://linkdoproj2.com" target="_blank">Ver Projeto</a>
+    </section>
+    <section id="educacao">
+        <div class="container">
+            <h2>Educação</h2>
+            <p><strong>Ensino Médio:</strong> Concluído na E. E. Prof. Morais Pacheco</p>
+            <p><strong>Cursando:</strong> Programação FullStack Java na EBAC (Escola Britânica de Artes Criativas e Tecnologia)</p>
+            <p><strong>Cursando:</strong> Projeto Farol Wise Madness (Programação em Python)</p>
         </div>
-
-        <!-- Projeto 3 -->
-        <div class="project" id="project3">
-            <img src="https://via.placeholder.com/400x250" alt="Projeto 3">
-            <h3>Projeto 3</h3>
-            <p>Descrição breve do projeto 3. Fale um pouco sobre a ideia por trás do projeto e seu impacto.</p>
-            <a href="https://linkdoproj3.com" target="_blank">Ver Projeto</a>
+    </section>
+    <section id="projetos">
+        <div class="container">
+            <h2>Projetos Pessoais</h2>
+            <div class="projeto">
+                <img src="images/image.jpg" alt="Imagem do Projeto Sorteio Web">
+                <h3>Projeto: Sorteio Web</h3>
+                <p>Desenvolvi uma aplicação web para realizar sorteios, com suporte a áudio e feedback por voz.</p>
+                <!-- Botão estilizado -->
+                <a href="https://github.com/leandrolopesleal262016/sorteio-webapp" target="_blank" class="btn-projeto">Acessar Projeto</a>
+            </div>
         </div>
-    </div>
-
+    </section>
     <footer>
-        <p>&copy; 2024 Meu Portfólio - <a href="https://github.com/seunome">GitHub</a> | <a href="https://www.linkedin.com/in/seunome">LinkedIn</a></p>
+        <div class="container">
+            <p>&copy; 2025 Lucas Gonzaga Luiz. Todos os direitos reservados.</p>
+        </div>
     </footer>
-
 </body>
 </html>
